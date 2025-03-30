@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  #Name must match the name of the .spec.valuesFrom[0].name in the HelmRelease above
+  name: kasten-io-k10-7.5.8-defaults 
+  namespace: ${releaseNamespace}
+data:
+  values.yaml: |-
+    ---
+    externalGateway:
+      create: true
+    auth:
+      tokenAuth:
+        enabled: true

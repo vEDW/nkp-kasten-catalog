@@ -1,0 +1,10 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: charts.kasten.io
+  namespace: ${releaseNamespace}
+spec:
+  interval: 10m #how long it polls to check for updates on the HelmRepo
+  timeout: 1m #how long before timeout
+  url: "${helmMirrorURL:=https://charts.kasten.io}" #defaults to https://charts.kasten.io if $helmMirrorURL envVar is not set
