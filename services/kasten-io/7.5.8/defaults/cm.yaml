@@ -7,8 +7,14 @@ metadata:
 data:
   values.yaml: |-
     ---
-    externalGateway:
-      create: true
     auth:
       tokenAuth:
         enabled: true
+    ingress:
+      create: true
+      class: kommander-traefik
+      urlPath: "/kasten"
+    prometheus:
+      server:
+        baseURL: "/kasten/prometheus/"
+        prefixURL: "/kasten/prometheus/"

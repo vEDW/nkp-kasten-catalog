@@ -25,3 +25,17 @@ spec:
     - kind: ConfigMap
       name: kasten-io-k10-7.5.8-defaults #must match the name of the default configmap we create later
   targetNamespace: kasten-io
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kasten-io-app-dashboard-info
+  namespace: ${releaseNamespace}
+  labels:
+    "kommander.d2iq.io/application": "kasten-io"
+data:
+  name: "Kasten K10"
+  dashboardLink: "/kasten/k10"
+  docsLink: "https://docs.kasten.io/latest/"
+  # Chart version matches app version
+  version: "7.5.8"

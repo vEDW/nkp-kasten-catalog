@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
   - kasten-io.yaml
   - ../../../helm-repositories/kasten-io
-  
+  - grafana-dashboards
