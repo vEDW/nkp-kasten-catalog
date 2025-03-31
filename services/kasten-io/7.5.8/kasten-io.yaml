@@ -32,7 +32,7 @@ metadata:
   name: kasten-io-app-dashboard-info
   namespace: ${releaseNamespace}
   labels:
-    "kommander.d2iq.io/application": "Kasten K10"
+    "kommander.d2iq.io/application": "kasten-io"
 data:
   name: "Kasten K10"
   dashboardLink: "/kasten/k10"
