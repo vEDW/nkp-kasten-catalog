@@ -23,7 +23,7 @@ spec:
   ref:
     branch: main
   timeout: 20s
-  url: https://github.com/WinsonSou/nkp-kasten-catalog.git
+  url: https://github.com/vedw/nkp-kasten-catalog.git
 EOF
 
 ``` 
