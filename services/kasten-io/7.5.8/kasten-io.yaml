@@ -35,7 +35,7 @@ metadata:
     "kommander.d2iq.io/application": "kasten-io"
 data:
   name: "Kasten K10"
-  dashboardLink: "/kasten/k10"
+  dashboardLink: "/kasten/"
   docsLink: "https://docs.kasten.io/latest/"
   # Chart version matches app version
   version: "7.5.8"
