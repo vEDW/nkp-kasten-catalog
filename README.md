@@ -30,3 +30,31 @@ EOF
 
 
 Install the App from the App catalog
+
+## configure k8s cluster for kasten
+
+* get kubeconfig for workload cluster
+* annotate volumesnapshotclass for kasten
+  get volumesnapshotclasses
+
+  ```
+  kubectl get volumesnapshotclasses
+
+  NAME                     DRIVER            DELETIONPOLICY   AGE
+  nutanix-snapshot-class   csi.nutanix.com   Retain           26d
+  ```
+
+  ```
+  kubectl annotate volumesnapshotclasses nutanix-snapshot-class "k10.kasten.io/is-snapshot-class"=true
+  ``` 
+
+* generate token for authentication
+
+  ```
+  kubectl --namespace kasten-io create token k10-k10 --duration=24h
+  ```
+
+
+use the generated token to access the kasten dashboard.
+
+
